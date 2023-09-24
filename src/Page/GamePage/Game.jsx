@@ -201,16 +201,16 @@
     }, [total_cards]);
     return (
       <>
-        <div className="w-[100%] h-[100vh] mx-auto flex items-center flex-col flex-wrap bg-red-900">
-          <div className="font-bold text-white md:text-[3rem] text-center mt-5 bg-red-900">
+        <div className="w-[100%] h-[100vh] mx-auto flex items-center flex-col flex-wrap">
+          <div className="font-bold text-white md:text-[3rem] text-center mt-5">
             MEMORY GAME
           </div>
 
-          <div className="flex justify-center items-center w-[100%] h-fit lg:w-[90%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 bg-white">
+          <div className="flex justify-center items-center w-[100%] h-fit lg:w-[90%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 ">
             {Completed ? (
               <div className="text-white">
                 Completed Try again
-                <div onClick={restartGame} className="text-white bg-white"> Play Again</div>
+                <div onClick={restartGame} className="text-white "> Play Again</div>
               </div>
             ) : (data.map((item, index) => {
               return (
