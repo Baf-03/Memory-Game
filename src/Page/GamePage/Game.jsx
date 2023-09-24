@@ -155,7 +155,7 @@
             //by doing this these cards will disappear from ui but their space will be reserved i made it false and conditonal rendering in card.jsx
             console.log("same");
             setTotalCards(total_cards - 1);
-          },200)
+          },400)
           total_cards-=1;
           console.log("cards",total_cards)
         
