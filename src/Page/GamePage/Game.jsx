@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../../Components/Card";
 import myaudio from './best_2012.mp3';
 import clapping from './clapping.mp3';
+import { Link } from "react-router-dom";
 
 
 
@@ -234,14 +235,14 @@ function Game() {
         <div className="font-bold text-white md:text-[3rem] text-center mt-5">
           MEMORY GAME 
         </div>
-    <div className="text-white">counter: {counter}</div>
+    <div className="text-white">counter: {counter}</div> <div className="text-white"><Link to='/'>Exit</Link></div>
         <div className="flex justify-center items-center w-[100%] h-fit lg:w-[90%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 ">
           {Completed ? (
             <div className="text-white">
               Completed Try again
               <div onClick={restartGame} className="text-white ">
                 {" "}
-                Play Again
+                Play Again <div className="text-white p-3 "><Link to='/'>Exit</Link></div>
               </div>
             </div>
           ) : (

@@ -44,8 +44,8 @@
   }
   @media (min-width:550px) and (max-width:1100px) {
     .card{
-      width: 12vw;
-      height: 8rem;
+      width: 20vw;
+      height: 15rem;
       perspective: 1000px;
       transition: transform 0.6s;
       transform-style: preserve-3d;
@@ -55,7 +55,7 @@
   }
   @media  (max-width:549px) {
     .card{
-      width: 25vw;
+      width: 20vw;
       height: 9rem;
       perspective: 1000px;
       transition: transform 0.6s;
