@@ -3,6 +3,8 @@ import './App.css';
 import Card from './Components/Card';
 import Game from './Page/GamePage/Game';
 import ParticleBg from './Components/ParticleBg';
+import Homepage from './Page/HomePage/homepage';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -10,11 +12,14 @@ import ParticleBg from './Components/ParticleBg';
 function App() {
   return (
     <>
-    <div>
+     <div>
       <ParticleBg/>
     <div className="App">
-      
-      <Game/>
+    <Routes>
+        <Route index element={ <Homepage/>}/>
+        <Route path='/game' element={<Game/>}/>
+    </Routes>
+
     </div>
     </div>
     </>
