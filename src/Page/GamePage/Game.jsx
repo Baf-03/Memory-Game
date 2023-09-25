@@ -7,6 +7,7 @@ import clapping from './clapping.mp3';
 
 
 function Game() {
+  let [counter,setCounter]=useState(0)
   let [Clicked_elements, set_Clicked_elements] = useState([]);
   let [Completed, setCompleted] = useState(false);
   let previousIndex;
@@ -140,6 +141,7 @@ function Game() {
     if (Clicked_elements.length < 2 && previousIndex != index) {
         Clicked_elements.push(index);
         set_Clicked_elements([...Clicked_elements]);
+       
         audio.play();
     } else if (Clicked_elements.length < 2) {
         console.log("remanin same", Clicked_elements);
@@ -154,6 +156,7 @@ function Game() {
       //this is run only when  the user have selected two cards it prevents on accessing when it is 1
       const previousIndex = Clicked_elements[0];
       const currentIndex = Clicked_elements[1];
+      setCounter(++counter)
 
       if (updatedData[previousIndex].name === updatedData[currentIndex].name) {
         //this else will run when u selected two same cards
@@ -166,6 +169,7 @@ function Game() {
               console.log("same");
               setTotalCards(total_cards - 1);
               success.play()
+              setCounter(++counter)
         }, 400);
         total_cards -= 1;
         console.log("cards", total_cards);
@@ -196,6 +200,7 @@ function Game() {
     setCompleted(false);
     Setclosetimecards("true");
     setTotalCards(12);
+    setCounter(0)
 
     //resetting the visibilty and isflip because these were changed during gameplay
     const resetVisibilityData = data.map((item) => {
@@ -227,9 +232,9 @@ function Game() {
     <>
       <div className="w-[100%] h-[100vh] mx-auto flex items-center flex-col flex-wrap">
         <div className="font-bold text-white md:text-[3rem] text-center mt-5">
-          MEMORY GAME
+          MEMORY GAME 
         </div>
-
+    <div className="text-white">counter: {counter}</div>
         <div className="flex justify-center items-center w-[100%] h-fit lg:w-[90%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 ">
           {Completed ? (
             <div className="text-white">
