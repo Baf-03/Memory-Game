@@ -48,17 +48,8 @@
   border-radius: 10%;
 
   }
-  @media (min-width:1101px) and (max-width:1279px) {
-    .card{
-      width: 13vw;
-      height: 11rem;
-      perspective: 1000px;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      margin-top: 10px;
-      border-radius: 10%;
-    }
-  }
+  
+
   @media (min-width:801px) and (max-width:1100px) {
     .card{
       width: 12vw;
@@ -104,4 +95,14 @@
     }
   }
   
-  
+  @media (max-height:780px ) and (min-width:700px)  and (max-width:1100px){
+    .card {
+      width: 10vw;
+      height: 10rem;
+      perspective: 1000px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin-top: 10px;
+      border-radius: 10%;
+    }
+  }
