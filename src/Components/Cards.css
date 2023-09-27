@@ -17,6 +17,10 @@
   }
  img{
   border-radius: 10%;
+  padding: 3px;
+  height: 80%;
+
+
  }
   
   .front,
@@ -26,7 +30,9 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .front {
@@ -42,10 +48,10 @@
   border-radius: 10%;
 
   }
-  @media (min-width:550px) and (max-width:1100px) {
+  @media (min-width:1101px) and (max-width:1279px) {
     .card{
-      width: 20vw;
-      height: 15rem;
+      width: 14vw;
+      height: 12rem;
       perspective: 1000px;
       transition: transform 0.6s;
       transform-style: preserve-3d;
@@ -53,10 +59,43 @@
       border-radius: 10%;
     }
   }
-  @media  (max-width:549px) {
+  @media (min-width:801px) and (max-width:1100px) {
     .card{
-      width: 20vw;
-      height: 9rem;
+      width: 12vw;
+      height: 10rem;
+      perspective: 1000px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin-top: 10px;
+      border-radius: 10%;
+    }
+  }
+  @media (min-width:550px) and (max-width:800px) {
+    .card{
+      width: 18vw;
+      height: 10rem;
+      perspective: 1000px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin-top: 10px;
+      border-radius: 10%;
+    }
+  }
+  @media (min-width:340px) and (max-width:549px) {
+    .card{
+      width: 24vw;
+      height: 8rem;
+      perspective: 1000px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin-top: 10px;
+      border-radius: 10%;
+    }
+  }
+  @media   (max-width:539px) {
+    .card{
+      width: 18vw;
+      height: 8rem;
       perspective: 1000px;
       transition: transform 0.6s;
       transform-style: preserve-3d;

@@ -3,6 +3,7 @@ import Card from "../../Components/Card";
 import myaudio from './best_2012.mp3';
 import clapping from './clapping.mp3';
 import { Link } from "react-router-dom";
+import './Game.css'; 
 
 
 
@@ -23,25 +24,18 @@ function Game() {
 
   let [data, setData] = useState([
     {
-      name: "fish",
+      name: "lion",
       visibility: "True",
       isflip: "false",
       background:
-        "https://cdn.pixabay.com/photo/2023/08/17/02/25/fish-8195323_1280.jpg",
+        "https://static.vecteezy.com/system/resources/previews/024/046/152/original/baby-lion-watercolor-illustration-ai-generated-free-png.png",
     },
     {
-      name: "fish",
+      name: "lion",
       visibility: "True",
       isflip: "false",
       background:
-        "https://cdn.pixabay.com/photo/2023/08/17/02/25/fish-8195323_1280.jpg",
-    },
-    {
-      name: "monkey",
-      visibility: "True",
-      isflip: "false",
-      background:
-        "https://img.freepik.com/premium-photo/monkey-wearing-yellow-jacket-jacket-with-word-monkey-it_661214-3091.jpg",
+        "https://static.vecteezy.com/system/resources/previews/024/046/152/original/baby-lion-watercolor-illustration-ai-generated-free-png.png",
     },
     {
       name: "monkey",
@@ -51,47 +45,54 @@ function Game() {
         "https://img.freepik.com/premium-photo/monkey-wearing-yellow-jacket-jacket-with-word-monkey-it_661214-3091.jpg",
     },
     {
-      name: "banana",
+      name: "monkey",
       visibility: "True",
       isflip: "false",
-      background: "https://images7.alphacoders.com/367/367377.jpg",
+      background:
+        "https://img.freepik.com/premium-photo/monkey-wearing-yellow-jacket-jacket-with-word-monkey-it_661214-3091.jpg",
+    },
+    {
+      name: "cat",
+      visibility: "True",
+      isflip: "false",
+      background: "https://static.vecteezy.com/system/resources/previews/022/461/230/large_2x/cute-tiny-cat-ai-generative-image-for-mobile-wallpaper-free-photo.jpg",
     },
 
     {
-      name: "banana",
+      name: "cat",
       visibility: "True",
       isflip: "false",
-      background: "https://images7.alphacoders.com/367/367377.jpg",
+      background: "https://static.vecteezy.com/system/resources/previews/022/461/230/large_2x/cute-tiny-cat-ai-generative-image-for-mobile-wallpaper-free-photo.jpg",
     },
 
     //----------------------------------------------------------------------------------
     {
-      name: "Apple",
+      name: "tiger",
       visibility: "True",
       isflip: "false",
       background:
-        "https://img.freepik.com/free-vector/red-apple-white-background_1308-103018.jpg",
+        "https://i0.wp.com/thaeyne.com/wp-content/uploads/2023/01/Thaeyne_animal_fa300c90-0c01-44cb-a8b9-b28f67c5702d.png?w=1180&ssl=1",
     },
     {
-      name: "Apple",
+      name: "tiger",
       visibility: "True",
       isflip: "false",
       background:
-        "https://img.freepik.com/free-vector/red-apple-white-background_1308-103018.jpg",
+        "https://i0.wp.com/thaeyne.com/wp-content/uploads/2023/01/Thaeyne_animal_fa300c90-0c01-44cb-a8b9-b28f67c5702d.png?w=1180&ssl=1",
     },
     {
-      name: "waterMelon",
+      name: "rat",
       visibility: "True",
       isflip: "false",
       background:
-        "https://img.freepik.com/premium-photo/fruit-watermelon-generated-by-ai-artificial-intelligence_1417-19713.jpg",
+        "https://storage.googleapis.com/pai-images/7c3dd37c39fa4a3ea1ad8b1a61d509e9.jpeg",
     },
     {
-      name: "waterMelon",
+      name: "rat",
       visibility: "True",
       isflip: "false",
       background:
-        "https://img.freepik.com/premium-photo/fruit-watermelon-generated-by-ai-artificial-intelligence_1417-19713.jpg",
+        "https://storage.googleapis.com/pai-images/7c3dd37c39fa4a3ea1ad8b1a61d509e9.jpeg",
     },
     {
       name: "bird",
@@ -231,20 +232,65 @@ function Game() {
 
   return (
     <>
-      <div className="w-[100%] h-[100vh] mx-auto flex items-center flex-col flex-wrap">
-        <div className="font-bold text-white md:text-[3rem] text-center mt-5">
+      <div className="w-[90%] h-[100vh] mx-auto flex items-center justify-center flex-col flex-wrap">
+        <div className="font-bold text-white md:text-[3rem] text-center mt-5 ">
           MEMORY GAME 
         </div>
-    <div className="text-white">counter: {counter}</div> <div className="text-white"><Link to='/'>Exit</Link></div>
-        <div className="flex justify-center items-center w-[100%] h-fit lg:w-[90%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 ">
+    <div className="text-white">counter: {counter}<Link to="/" className=""> <div>Exit</div></Link>
+</div>
+        <div className="flex justify-center items-center w-[100%] h-fit md: lg:w-[100%] xl:w-[50%] p-5 flex-wrap gap-2 md:gap-3 lg:gap-8 xl:gap-12 mt-5 ">
           {Completed ? (
             <div className="text-white">
-              Completed Try again
-              <div onClick={restartGame} className="text-white ">
-                {" "}
-                Play Again <div className="text-white p-3 "><Link to='/'>Exit</Link></div>
-              </div>
+             <div className="text-red-700 text-[1.5rem] p-5 mb-5 font-bold"> Well Played!</div>
+            
+              
+                <div className="container" onClick={restartGame}>
+                <Link to="/game" className="button button--piyo">
+    <div className="button__wrapper">
+        <span className="button__text">Play again</span>
+    </div>
+    <div className="characterBox">
+        <div className="character wakeup">
+            <div className="character__face"></div>
+        </div>
+        <div className="character wakeup">
+            <div className="character__face"></div>
+        </div>
+        <div className="character">
+            <div className="character__face"></div>
+        </div>
+    </div>
+</Link>
+
+<Link to="/" className="button button--piyo">
+<div class="button__wrapper">
+            <span class="button__text">EXIT!</span>
+        </div>
+        <div class="characterBox">
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
             </div>
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+            </div>
+            <div class="character">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+            </div>
+        </div>
+</Link>
+
+
+</div>
+
+</div>
+
+
+
+      
+           
           ) : (
             data.map((item, index) => {
               return (
